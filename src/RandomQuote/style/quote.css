@@ -1,0 +1,26 @@
+.quoteContainer{
+    position: absolute;
+    height: 100px;
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    top: 280px;
+    font-size: 22px;
+    margin: 0 auto;
+}
+
+.quoteContainer em{
+      float: right;
+  }
+
+@media only screen and (max-width: 600px) {
+    .quoteContainer{
+        position: absolute;
+        height: 100px;
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+        top: 200px;
+        font-size: 15px;
+    }
+}
