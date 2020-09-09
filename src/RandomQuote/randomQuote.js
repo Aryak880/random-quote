@@ -4,10 +4,12 @@ import './style/quote.css';
 function RandomQuote(props){
         const style = {
             color: props.color,
+            position: "relative",
+            top: 100
         }
 
         return(
-            <div className="quoteContainer" style={style}>
+            <div style={style} className="quoteContainer">
                 <div className="quote"><b>{props.content}</b></div>
                 <br />
                 <div className="author"><em>-{props.author}</em></div>

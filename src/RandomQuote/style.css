@@ -1,5 +1,5 @@
 .container{
-    width: 528px;
+    width: 900px;
     text-align: center;
     margin: 0 auto;
 }
@@ -11,7 +11,61 @@ footer{
     background-color: gainsboro;
 }
 
+.quoteContainer{
+    position: absolute;
+    height: 100px;
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    top: 280px;
+    font-size: 22px;
+    margin: 0 auto;
+}
+
+.quoteContainer em{
+      float: right;
+  }
+
+.drag-box{
+    cursor: pointer;
+    z-index: 10;
+}
+
+.eventAndFooter{
+    position: relative;
+    top: -60px;
+    border-radius: 4px;
+}
+
+.RandomImage{
+    margin-top: 20px;
+    position: relative;
+    top: -120px;
+    z-index: -10;
+}
+
+footer{
+    border-radius: 4px;
+    padding: 10px;
+}
+
 @media only screen and (max-width: 600px) {
+    .quoteContainer{
+        position: absolute;
+        height: 100px;
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+        top: 200px;
+        font-size: 15px;
+    }
+
+    .RandomImage{
+        position: relative;
+        top: -100px;
+        z-index: -10;
+    }
+
     .container{
         width: 428px;
     }

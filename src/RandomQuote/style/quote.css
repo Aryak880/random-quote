@@ -1,6 +1,6 @@
 .quoteContainer{
     position: absolute;
-    height: 100px;
+    /* height: 100px; */
     width: 500px;
     text-align: center;
     margin: 0 auto;
@@ -16,7 +16,7 @@
 @media only screen and (max-width: 600px) {
     .quoteContainer{
         position: absolute;
-        height: 100px;
+        /* height: 100px; */
         width: 300px;
         text-align: center;
         margin: 0 auto;

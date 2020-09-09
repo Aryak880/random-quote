@@ -1,4 +1,5 @@
 import React from 'react';
+import Draggable from 'react-draggable';
 import RandomQuote from './randomQuote';
 import RandomImage from './imageComponent';
 import HandleEvents from './handleEvents';
@@ -94,38 +95,42 @@ class App extends React.Component {
       <div className="container">
         <div className="alert alert-success" role="alert">
           <h3>Generate random quote!</h3>
+          take screenshot and share it!😉
         </div>
         
-            {
-                !this.state.isLoadingText &&    
-                <RandomQuote
-                  author={this.state.author}
-                  content={this.state.content}
-                  color={this.state.color}
-                />
-            }
-
+        <Draggable>
+          <div className="drag-box">
+                {
+                    this.state.isLoadingText ? "Loading..." :
+                    <RandomQuote
+                      author={this.state.author}
+                      content={this.state.content}
+                      color={this.state.color}
+                    />
+                }
+          </div>
+        </Draggable>   
+          <div className="RandomImage">
             {
                 this.state.isLoadingImg ? <h2>Loading...</h2> :
                 <RandomImage 
                 url={this.state.url} 
               />          
             }
+          </div>
+            
+            <div className="eventAndFooter">
+                <HandleEvents 
+                    handleClickText={this.handleClickText}
+                    handleClickImg={this.handleClickImg}
+                    handleChange={this.handleChange}
+                />
 
-            <hr />
-
-            <HandleEvents 
-                handleClickText={this.handleClickText}
-                handleClickImg={this.handleClickImg}
-                handleChange={this.handleChange}
-            />
-
-            <hr />
-
-            <footer>
-              devloped by &copy;Aryak Singh chauhan <br />
-              photo by &copy; {this.state.photographer} on Unsplash
-            </footer>
+                <footer>
+                  devloped by &copy;Aryak Singh chauhan <br />
+                  photo by &copy; {this.state.photographer} on Unsplash
+                </footer>
+            </div>
         </div>
     )
   }
