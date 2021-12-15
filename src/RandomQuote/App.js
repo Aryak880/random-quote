@@ -127,7 +127,7 @@ class App extends React.Component {
                 />
 
                 <footer>
-                  devloped by &copy;Aryak Singh chauhan <br />
+                  devloped by &copy;Aryan Chaturvedi <br />
                   photo by &copy; {this.state.photographer} on Unsplash
                 </footer>
             </div>
